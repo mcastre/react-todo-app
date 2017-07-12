@@ -2,7 +2,7 @@ var React = require('react');
 var ReactDOM = require('react-dom');
 var {Route, Router, IndexRoute, hashHistory} = require('react-router');
 
-var Main = require('Main');
+var TodoApp = require('TodoApp');
 
 require('style!css!foundation-sites/dist/foundation.min.css');
 $(document).foundation();
@@ -11,9 +11,6 @@ $(document).foundation();
 require('style!css!sass!AppStyles');
 
 ReactDOM.render(
-  <Router history={hashHistory}>
-    <Route path="/" component={Main}>
-    </Route>
-  </Router>,
+  <TodoApp></TodoApp>,
   document.getElementById('app')
 );
